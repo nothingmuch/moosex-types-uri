@@ -82,3 +82,5 @@ ok( !$duri->check($base_rel),  "rel with base" );
 ok( !$duri->check($http_str), "not for string" );
 ok( !$duri->check(undef), "not for undef" );
 ok( !$duri->check(Foo->new), "not for object" );
+
+
