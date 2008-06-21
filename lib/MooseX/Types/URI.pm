@@ -40,7 +40,7 @@ my $uri = Moose::Meta::TypeConstraint->new(
 
 register_type_constraint($uri);
 
-coerce( _Uri,
+coerce( Uri,
     from Str                 => via { URI->new($_) },
     from "Path::Class::File" => via { URI::file->new($_) },
     from "Path::Class::Dir"  => via { URI::file->new($_) },
