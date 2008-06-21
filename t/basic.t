@@ -84,3 +84,15 @@ ok( !$duri->check(undef), "not for undef" );
 ok( !$duri->check(Foo->new), "not for object" );
 
 
+isa_ok( to_Uri("foo"), "URI" );
+is( to_Uri("foo")->path, "foo", "URI" );
+is( to_Uri("foo")->scheme, undef, "URI" );
+
+isa_ok( to_FileUri("foo"), "URI::file" );
+is( to_FileUri("foo")->file, "foo", "filename" );
+
+isa_ok( to_DataUri("foo"), "URI::data" );
+is( to_DataUri("foo")->data, "foo", "foo as data" );
+
+isa_ok( to_DataUri(\"foo"), "URI::data" );
+is( to_DataUri(\"foo")->data, "foo", "scalar ref foo as data" );
