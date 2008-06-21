@@ -56,13 +56,7 @@ coerce( FileUri,
     from "Path::Class::Dir"  => via { URI::file->new($_) },
 );
 
-subtype DataUri, as _Uri, where {
-    if ( my $scheme = $_->scheme ) {
-        return $scheme eq 'data';
-    } else {
-        return undef;
-    }
-};
+class_type DataUri, { class => "URI::data" };
 
 coerce( DataUri,
     from Str       => via { my $u = URI->new("data:"); $u->data($_);  $u },
