@@ -83,6 +83,8 @@ ok( !$duri->check($http_str), "not for string" );
 ok( !$duri->check(undef), "not for undef" );
 ok( !$duri->check(Foo->new), "not for object" );
 
+isa_ok( to_Uri($http_str), "URI" );
+is( to_Uri($http_str)->scheme, "http", "scheme" );
 
 isa_ok( to_Uri("foo"), "URI" );
 is( to_Uri("foo")->path, "foo", "URI" );
