@@ -122,6 +122,18 @@ Has coercions from C<Str>, L<Path::Class::File> and L<Path::Class::Dir> via L<UR
 
 Think about L<Path::Resource> integration of some sort
 
+=head1 VERSION CONTROL
+
+L<http://code2.0beta.co.uk/moose/svn/>. Ask on #moose for commit bits.
+
+=head1 AUTHOR
+
+Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
+
+=head1 COPYRIGHT
+
+	Copyright (c) 2008 Yuval Kogman. All rights reserved
+	This program is free software; you can redistribute
+	it and/or modify it under the same terms as Perl itself.
+
 =cut
-
-
