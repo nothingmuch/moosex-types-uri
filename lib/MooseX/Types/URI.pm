@@ -79,6 +79,12 @@ MooseX::Types::URI - L<URI> related types and coercions for Moose
 
 =head1 DESCRIPTION
 
+This package provides Moose types for fun with L<URI>s.
+
+It has slightly DWIMier types than the L<URI> classes have due to
+implementation details, so the types should be more forgiving when ducktyping
+will work anyway (e.g. L<URI::WithBase> does not inherit L<URI>).
+
 =head1 TYPES
 
 The types are with C<ucfirst> naming convention so that they don't mask the
